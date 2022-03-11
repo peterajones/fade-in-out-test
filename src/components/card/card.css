@@ -1,0 +1,66 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+#group-one,
+#group-two {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.card {
+	position: relative;
+	width: 200px;
+	height: 100px;
+	border: 1px solid #666;
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
+}
+[data-group='grp-1'] {
+	background-color: #6633990d;
+}
+[data-group='grp-2'] {
+	background-color: rgba(255, 166, 0, 0.4);
+}
+
+#group-one {
+	visibility: visible;
+	height: fit-content;
+	transition: all 02s 3s ease-in-out;
+}
+
+#group-two {
+	visibility: visible;
+	height: fit-content;
+	transition: all 02s 3s ease-in-out;
+}
+
+.hide-group {
+	visibility: hidden !important;
+	height: 0 !important;
+	transition: all 2s 3s ease-in-out;
+}
+
+.fade-in {
+	opacity: 1;
+}
+
+.fade-out {
+	opacity: 0;
+}
+
+.toggle {
+	padding-bottom: 20px;
+}
+input#checkbox {
+	display: none;
+}
+label#toggle {
+	cursor: pointer;
+	padding-bottom: 20px;
+}
